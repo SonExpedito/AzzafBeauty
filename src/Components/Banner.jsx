@@ -20,12 +20,12 @@ const Banner = () => {
             <div className="w-full h-24 flex gap-1 navcolor items-center overflow-hidden px-12">
                 <div className="w-1/2 h-full flex items-center ">
                     <img src={Logo} alt="AzzafBeauty Logo" className="h-20" />
-                    <h1 className="font-extrabold italic text-xl">AzzafBeauty</h1>
+                    <h1 className="font-extrabold italic text-xl logotext">AzzafBeauty</h1>
                 </div>
                 <div className="w-1/2 h-full flex items-center justify-end gap-6 px-2">
-                    <IoSearchSharp className="text-2xl cursor-pointer iconesacao" />
-                    <IoBag className="text-2xl cursor-pointer iconesacao" />
-                    <FaUser className="text-xl cursor-pointer iconesacao" />
+                    <IoSearchSharp className="text-2xl cursor-pointer iconesacao navbuttons" />
+                    <IoBag className="text-2xl cursor-pointer iconesacao navbuttons" />
+                    <FaUser className="text-xl cursor-pointer iconesacao navbuttons" />
                 </div>
 
             </div>

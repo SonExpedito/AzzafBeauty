@@ -1,26 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-#root{
+#root {
   background-color: #ffffff;
   min-height: 100vh;
   font-family: Poppins;
   overflow-x: hidden;
 }
 
-.bgrosa{
-  background-color: #e99293;
+/*Navbar*/
+@media (max-width:470px) {
+  .logotext {
+    display: none;
+  }
 }
 
-.custom-gradient {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 100%);
+@media (max-width:370px) {
+  .navbuttons {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
+
+/*icones*/
+
+.iconesacao {
+  transition: 0.15s ease-in all;
+}
+
+.iconesacao:hover {
+  transform: scale(1.1);
+}
+
 
 /*Banner*/
 .banner {
   border-bottom-width: 4px;
-  background-color: #e99293;
+  background: linear-gradient(to bottom right, #f7575a, #e99293);
+
 }
 
 .h-custombanner {
@@ -31,52 +47,117 @@
 
 @media (max-width:920px) {
   .h-custombanner {
-      flex-direction: column-reverse;
-      align-items: center;
-      height: fit-content;
-
+    flex-direction: column-reverse;
+    align-items: center;
+    height: fit-content;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .bannertextwrapper {
-      padding: 0;
+    padding: 0;
+    padding-top: 1rem;
   }
 }
 
 
 /*PT2*/
 
-.h-colections{
+.h-colections {
   height: 85vh;
+
 }
 
-.custom-shadow {
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+
+@media (max-width:1024px) {
+  .collections-responses {
+    height: fit-content;
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+  }
 }
 
-/*icones*/
-
-.iconesacao{
-  transition: 0.2s ease-in all;
+@media (max-width:550px) {
+  .cards-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
 }
 
-.iconesacao:hover{
-  transform: scale(1.1);
+/*Parte 3*/
+
+.h-scrollffect {
+  height: 72vh;
 }
+
+.bg-rosa {
+  background: linear-gradient(to bottom right, #f7575a, #e99293);
+}
+
+@media (max-width:470px) {
+  .h-scrollffect {
+    height: 88vh;
+  }
+
+}
+
+.scroll-effect {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+}
+
+/* Quando a animação é ativada */
+.scroll-effect-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*Parte 4*/
+.banner-review {
+  height: 75vh;
+}
+
+@media (max-width:700px) {
+
+  .banner-review{
+    height: fit-content;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .side-container {
+    width: 100%;
+  }
+
+  .text-containerside {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+
 
 
 /*Botão*/
 
 .filling-button {
   position: relative;
-  width: 100px; /* Ajuste conforme necessário */
+  width: 100px;
+  /* Ajuste conforme necessário */
   padding: 10px;
   border: 2px solid white;
-  color: white; /* Cor do texto inicial */
-  background-color: transparent; /* Fundo do botão transparente */
+  color: white;
+  /* Cor do texto inicial */
+  background-color: transparent;
+  /* Fundo do botão transparente */
   overflow: hidden;
   cursor: pointer;
   font-size: 16px;
-  transition: color 0.3s; /* Transição suave para a cor do texto */
+  transition: color 0.3s;
+  /* Transição suave para a cor do texto */
 }
 
 .filling-button .filling {
@@ -85,21 +166,25 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 100%; /* Preenche a altura total do botão */
-  background-color: white; /* Cor de preenchimento */
-  transform: translateY(-100%); /* Começa fora da vista */
-  transition: transform 0.3s; /* Transição suave */
-  z-index: 0; /* Fica atrás do texto */
+  height: 100%;
+  /* Preenche a altura total do botão */
+  background-color: white;
+  /* Cor de preenchimento */
+  transform: translateY(-100%);
+  /* Começa fora da vista */
+  transition: transform 0.3s;
+  /* Transição suave */
+  z-index: 0;
+  /* Fica atrás do texto */
 }
 
 
 .filling-button:hover {
-  color: black; /* Altera a cor do texto no hover */
+  color: black;
+  /* Altera a cor do texto no hover */
 }
 
 .filling-button:hover .filling {
-  transform: translateY(0); /* Move o preenchimento para baixo */
+  transform: translateY(0);
+  /* Move o preenchimento para baixo */
 }
-
-
-
