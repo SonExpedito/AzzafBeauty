@@ -7,8 +7,8 @@
   overflow-x: hidden;
 }
 
-.navcolor{
-  
+.bgrosa{
+  background-color: #e99293;
 }
 
 .custom-gradient {
@@ -41,5 +41,65 @@
       padding: 0;
   }
 }
+
+
+/*PT2*/
+
+.h-colections{
+  height: 85vh;
+}
+
+.custom-shadow {
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/*icones*/
+
+.iconesacao{
+  transition: 0.2s ease-in all;
+}
+
+.iconesacao:hover{
+  transform: scale(1.1);
+}
+
+
+/*Botão*/
+
+.filling-button {
+  position: relative;
+  width: 100px; /* Ajuste conforme necessário */
+  padding: 10px;
+  border: 2px solid white;
+  color: white; /* Cor do texto inicial */
+  background-color: transparent; /* Fundo do botão transparente */
+  overflow: hidden;
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.3s; /* Transição suave para a cor do texto */
+}
+
+.filling-button .filling {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%; /* Preenche a altura total do botão */
+  background-color: white; /* Cor de preenchimento */
+  transform: translateY(-100%); /* Começa fora da vista */
+  transition: transform 0.3s; /* Transição suave */
+  z-index: 0; /* Fica atrás do texto */
+}
+
+
+.filling-button:hover {
+  color: black; /* Altera a cor do texto no hover */
+}
+
+.filling-button:hover .filling {
+  transform: translateY(0); /* Move o preenchimento para baixo */
+}
+
 
 
