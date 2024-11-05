@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+#root{
+  background-color: #ffffff;
+  min-height: 100vh;
+  font-family: Poppins;
+  overflow-x: hidden;
+}
+
+.navcolor{
+  
+}
+
+.custom-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 100%);
+}
+
+/*Banner*/
+.banner {
+  border-bottom-width: 4px;
+  background-color: #e99293;
+}
+
+.h-custombanner {
+  height: calc(100vh - 5rem);
+}
+
+
+
+@media (max-width:920px) {
+  .h-custombanner {
+      flex-direction: column-reverse;
+      align-items: center;
+      height: fit-content;
+
+  }
+
+  .bannertextwrapper {
+      padding: 0;
+  }
+}
+
+
